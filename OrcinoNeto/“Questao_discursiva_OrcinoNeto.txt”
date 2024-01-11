@@ -1,0 +1,10 @@
+4° 
+A)- Não está normalizada, pois Existe atributos, multivalorados, e pendências.
+B)- A tabela não pode ter mais de 1 chave primária, atributos multivalorados como 
+local_fornecedor, tel_fornecedor, deveriam está em uma tabela especifica para eles.
+
+7°- 1FN, O Atributo endereço é multivalorado.
+
+9° - Criaria uma tabela dominio do artista com os atributos que estão em redundancia. 
+Criaria uma tabela com nome artista e no atributos dessa tabela, serião os atributos que
+estão em redundância.
