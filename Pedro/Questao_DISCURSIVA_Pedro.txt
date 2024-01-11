@@ -1,0 +1,8 @@
+4- 
+    a)O problema de normalização apresentado se refere ao fato de haver duas Primary Key, e os atributos "Local_Fornecedor" e "Tel_Fornecedor" deveriam ser tabelas;
+    b) Dependência parcial: "Local_Fornecedor" e "Tel_Fornecedor" dependem apenas da chave primária "Cod_Fornecedor"; Dependência transitiva: "Qtde_Estoque" determina "Qtde_Caixas"; 
+
+7- O atributo "endereco" não é valor atômico, mas composto;
+
+9- É necessário normalizar o modelo, ou seja, criando uma tabela "artista", que terá os atributos "data_nascimento" e "nacionalidade", e essa tabela se relacionará com a tabela 
+"contrato" e com uma tabela "genero_musical"; 
