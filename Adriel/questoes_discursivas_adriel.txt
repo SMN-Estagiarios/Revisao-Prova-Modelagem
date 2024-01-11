@@ -1,0 +1,25 @@
+4- sim a tabela está desnormalizada. Em relaçao a normalização a tabela em questão apensar de ter uma chave primaria
+composta não está completamente normalizada. Percebe-se que podem conter ainda atributos multivalorados)
+e, além disso, a chave primaria composta esta gerando uma dependência parcial entre os outros atributos
+que não são chaves. Exemplo local do fornecedor e tel_fornecedor se referem diretamente a parte da chave
+primária (cod_fornecedor) e os demais atributos estão relacionados a peça em si. Para solucionar esse problema
+podemos dividir essa tabela em duas tb_peça e tb_fornecedor. Assim, não haverá mais nenhuma 
+dependência parcial em relação a chave e os atributos não-chave irão depender funcionalmente da chave primária de sua tabela 
+fazendo com que a tabela de peça esteja na 2 forma normal.
+Já na tabela de fornecedor, percebe-se ainda que a tabela do fornecedor está com um atributo que 
+tem a possibilidade de ser multivalorado (tel_fornecedor) desse modo, dependendo da regra de negócio poderá ser necessário
+a criação de outra tabela de telefone para os fornecedores garantindo a normalização completa da tabela
+como esse caso não possui dependências transitivas, as duas tabelas adquirem status da terceira forma normal. 
+
+
+7 - na tabela cliente o atributo de endereço além de estar com uma quantidade de caracteres muito 
+reduzidas não expressa necessariamente a realidade do registros do endereço do cliente pois endereço é um atributo
+composto. Uma solução para isso, depende da regra de negócio. Se for considerado que o cliente possui mais de um endereço
+pode ser necessario fazer nova tabela contendo os atributos de endereço. Se o cliente possui endereço fixo. 
+(para facilitar as consultas) pode ser proveitoso colocar os atributos de endereço na tabela cliente
+
+9 - essa tabela em 3 -> contrato, artista, genero assim, com criação dessas novas tabelas os relacionamentos serão feitos 
+garantindo que não se tenha anomalias de redundância. é necessário também verificar que os atributos (nome_artista, data_nascimento e nacionalidade) podem 
+ir diretamente para a tabela do artista. tabela genero irá possuir um nome como atributo e o restante dos atributos irão permancer em contrato, o relacionamento 
+entre as tabelas será feito por meio da chave estrangeira das novas tabelas em contrato. PAra otmizar, se houver mais de dois tipos de contrato pode ser 
+criada uma tabela domínio de tipo_contrato. 
