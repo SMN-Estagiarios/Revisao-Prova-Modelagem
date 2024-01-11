@@ -1,0 +1,7 @@
+4 - A tabela não está normalizada. Pois a mesma apresenta duas chaves primárias, nesse caso teria que ser feita a 1FN, logo, ao observar a tabela pode-se tirar que será necessário desdobrar em duas tabelas, uma para peça e outra para fornecedor,  para que não haja redundância de informações. A tabela peça ficará apenas com os atributos qtde_estoque e qtde_caixas onde estes poderão ser NULL. Já a tabela fornecedor ficará com os demais atributos, local_fornecedor e tel_fornecedor, e neste caso ambas informações serão NOT NULL. Criar, também, uma tabela associativa, pois as duas tabelas geram um relacionamento de muitos para muitos. Tornar esses atributos como chave estrangeira.
+ 
+
+7 - Sim, pois o atributo endereco engloba muitas outras informações, tais como, logradouro, complemento, cep, bairro, cidade e uf (no caso, esta pode ser uma tabela dependente da tabela cliente).
+
+9 - Desmembraria a tabela contrato em mais outras duas tabelas, uma para tipo_contrato e uma outra para artista, e criaria também, uma tabela associativa entre contrato e artista. Fazendo com que isso não ocasionassem nenhum tipo de informações repetidas no banco de dados.
+
