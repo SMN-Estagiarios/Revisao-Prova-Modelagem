@@ -1,0 +1,5 @@
+4 - Para fazer a normalização basta tirar o "local_fornecedor", colocando o fornecedor como uma entidade com uma pk na "tbl_peca".
+
+7 - Sim, o endereço é um atributo multivalorado, a primeira forma normal não permite atributos multivalorados.
+
+9 - Eu faria uma tabela de contrato, uma de tipo de contrato, outra para os dados do artista e outra para armazenar os gêneros musicais. Tiraria o "TipoContrato", "GeneroArtista" e "NacionalidadeArtista".
