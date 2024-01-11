@@ -1,0 +1,5 @@
+4- Através de uma analise, pude identificar que ela apresenta uma dependência parcial, onde alguns atributos dependem apenas de uma das PK's e não de ambas, como é o caso do "tel_fornecedor" que depende apenas do Cod_Fornecedor. Portanto, isso viola a 2ª forma normal, que diz que devemos remover todas as dependências parciais da entidade.
+
+7- Sim, a 1ª forma normal. A 1ª forma normal exige que não haja nenhum tipo de atributo multivalorado ou composto, porém, a questão apresenta o atributo endereço que é multivalorado. A solução seria pegar o atributo endereço e dividi-lo em vários atributos (logradouro, bairro, numero, cep, cidade e uf se for o caso). Caso seja necessário o "UF", o ideal seria que criasse uma nova tabela "UF" e então trazer o seu ID como uma FK para a tabela "Cliente".
+
+9- A primeira coisa seria a criação de uma tabela "artista", onde os atributos "NomeArtista", "GeneroArtista", "DataNascimentoArtista" e "NacionalidadeArtista" seriam transferidos da tabela "contrato" para essa tabela "artista". Em seguida, traria o ID do artista para a tabela "contrato" como uma FK.
