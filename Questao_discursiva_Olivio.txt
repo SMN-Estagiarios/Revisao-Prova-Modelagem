@@ -1,0 +1,18 @@
+4) 
+A&B)
+    A tabela peça está na primeira forma normal (1FN) mas ainda não chegou à segunda forma normal (2FN), pois contém duas Chaves Primárias em sua estrutura. 
+    Para resolver este problema, se faz necessária a criação de outra tabela Fornecedor para adicionar os atributos inerentes a ele,
+    como Cod_Fornecedor, Local_Fornecedor e Tel_Fornecedor. 
+    Já na tabela de Peca, conterá os atributos Cod_Peca, Qtde_Estoque e Qtde_Caixas. 
+    Com isso eliminamos as dependências funcionais parciais que alguns atributos incorrem sobre os outros. 
+
+
+7) A tabela cliente viola a primeira forma normal, que consiste em eliminar dados multivalorados.
+    O problema acontece no atributo endereco, pois é um campo que necessita de diversas propriedades, como: logradouro, numero, bairro, complemento, cep.
+    Quando colocamos todas essas informações em apenas um atributo, se torna difícil a manipulação dos dados, violando o princípio de trabalhar com Bancos de Dados Relacionais.
+
+
+9) Para resolver a questão de redundância de informações sobre os artistas nos contratos se faz necessário normalizar a tabela de Contrato.
+    Para isso devemos criar outra tabela com nome Artista, com uma Primary Key (ID) e os atributos NomeArtista, GeneroArtista, DataNascimentoArtista e NacionalidadeArtista.
+    Logo após, realizamos o relacionamento da tabela Artista com a tabela Contrato, adicionando uma ligação de Um Artista para muitos Contratos (1:N),
+    com o ID do artista na tabela contrato, evidenciando que aquele contrato pertence àquele artista.
