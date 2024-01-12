@@ -1,0 +1,24 @@
+1)
+C) A chave primária garante a unicidade dos registros em uma
+tabela, enquanto a chave estrangeira estabelece relações entre
+tabelas, garantindo integridade referencial. A chave estrangeira irá
+para a tabela dependente ou de maior cardinalidade da relação.
+
+
+2) C) Aumentar a complexidade do modelo para garantir uma
+abordagem mais detalhada da estrutura de dados.
+
+
+3) A) Lidar com a conversão de tipos de dados incompatíveis entre o
+banco de dados antigo e o novo, garantindo a integridade e
+consistência dos dados
+
+5) A) Criar tabelas separadas para Autores, Generos e Editoras, e
+utilizar chaves estrangeiras.
+
+6) A) Anomalia de Inserção: Duplicação de dados ao inserir
+informações sobre livros com o mesmo autor.
+
+8) C) UsuarioCadastro, DataCadastro, DataAlteracao, UsuarioAlteracao.
+Em todas as tabelas. Devem ser assinaladas como NOT NULL:
+DataAlteracao, UsuarioAlteracao
