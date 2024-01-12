@@ -1,0 +1,12 @@
+4- Não está normlalizada.
+Local_Fornecedor é um endereço, logo é um atributo composto. Para deixá-la na 1FN precisamos decompor esse atributo em mais atributos ou uma entidade endereço com os atributos logradouro, complemento, bairro, cep, cidade. 
+Possue chave primária composta, para deixá-la na 2FN, vamos deixar a Cod_Fornecedor como fk na tabela e criar uma nova entidade Fornecedor, onde o Cod_Fornecedor, onde o cod_Fornecedor será sua pk.
+Qtde_Caixas depende de Qtde_Estoque, causando uma dependência transitiva. Para deixá-la na 3FN precisa elimina essa dependência.
+
+7- A 1FN. Pois  o atributo endereço é um atributo composto. Logo, deve ser quebrado em diferentes atributos, como logradouro, complemento, bairoo, cep, cidade. Podendo ser uma entidade específica ou apenas atributos dentro de outra.
+
+9- Separaria em 3 tabelas.
+Tabela contrato, tabela tipo_contrato e tabela artista.
+Tabela contrato: id, id_tipo_contrato, id_artista, data_inicio e data_termino
+Tabela tipo_contrato: id_tipo_contrato e nome
+Tabela artista: nome_artista, genero_artista, data_nascimento_artista e nacionalidade_artista
